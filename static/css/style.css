@@ -1,184 +1,183 @@
-        /* Color Palette */
-        :root {
-            --background-color: #232932;
-            --primary-color: #232932;
-            --header-color: #283447;
-            --text-color: #e0e0e0;
-            --accent-color: #ED5145;
-            --gradient-start: #F27121;
-            --gradient-middle: #E94057;
-            --gradient-end: #8A2387;
-            --container-shadow: rgba(0, 0, 0, 0.3);
-        }
+/* Color Palette */
+:root {
+    --background-color: #232932;
+    --primary-color: #232932;
+    --header-color: #283447;
+    --text-color: #e0e0e0;
+    --accent-color: #ED5145;
+    --gradient-start: #F27121;
+    --gradient-middle: #E94057;
+    --gradient-end: #8A2387;
+    --container-shadow: rgba(0, 0, 0, 0.3);
+    --box-shadow-color-1: #1a1a1a;
+    --box-shadow-color-2: #242424;
+    --white-color: #fff;
+}
 
-        body {
-            font-family: 'Jost', sans-serif;
-            background-color: var(--background-color);
-            color: var(--text-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-            box-shadow: 0px 8px 15px var(--container-shadow);
-            border-radius: 10px;
-            padding: 1rem;
-            background-color: var(--primary-color);
-        }
-        .header {
-            padding: 1rem;
-            background-color: var(--header-color);
-            border-radius: 10px;
-        }
-        h1 {
-            font-size: 2rem;
-        }
-        p {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: var(--text-color);
-        }
-        .icon-wrapper {
-            position: relative;
-            display: inline-block;
-            margin: 1.5rem;
-        }
+body {
+    font-family: 'Jost', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
 
-        .icon {
-            width: 8rem;
-            height: 8rem;
-            transition: transform 0.3s;
-        }
+.container {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 8px 15px var(--container-shadow);
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: var(--primary-color);
+}
 
-        .icon:hover {
-            transform: scale(1.1);
-        }
+.header {
+    padding: 1rem;
+    background-color: var(--header-color);
+    border-radius: 10px;
+}
 
-        .skill-icons {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
+h1 {
+    font-size: 2.5rem;
+}
 
-        .icon-wrapper::after {
-            content: attr(data-skill);
-            position: absolute;
-            top: 110%;
-            left: 50%;
-            transform: translateX(-50%);
-            min-width: 10rem;
-            padding: 0.5rem 1rem;
-            background-color: var(--header-color);
-            color: #fff;
-            font-size: 0.8rem;
-            border-radius: 0.5rem;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.6s, visibility 0.6s;
-            z-index: 10;
-            text-align: center;
-        }
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
 
-        .icon-wrapper:hover::after {
-            opacity: 1;
-            visibility: visible;
-        }
-        .text-highlight {
-            color: var(--accent-color);
-        }
-        .timeline {
-            width: 90%;
-            margin: 2rem auto;
-            display: flex;
-            flex-direction: column;
-        }
-        .timeline-content {
-            padding: 20px;
-            background: var(--background-color);
-            box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
-            border-radius: 6px;
-            color: var(--text-color);
-            transition: 0.4s ease;
-            overflow-wrap: break-word;
-            margin: 1rem;
-        }
-        .timeline-component {
-            margin-bottom: 20px;
-            position: relative;
-        }
-        .timeline-circle {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            background-image: linear-gradient(45deg, var(--gradient-start), var(--gradient-middle), var(--gradient-end));
-        }
-        h1 {
-            font-size: 2.5rem;
-        }
-        .timeline {
-            flex-direction: column;
-            position: relative;
-        }
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background-image: linear-gradient(45deg, var(--gradient-start), var(--gradient-middle), var(--gradient-end));
-            transform: translateX(-50%);
-        }
-        .timeline-component {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 2rem 0;
-        }
-        .timeline-content {
-            width: 300px;
-            text-align: left;
-            position: relative;
-        }
-        .timeline-circle {
-            top: -15px;
-        }
+.icon-wrapper {
+    position: relative;
+    display: inline-block;
+    margin: 1.5rem;
+}
 
-        .socials a {
-            display: inline-block;
-            margin: 0 0.5rem;
-        }
+.icon,
+.social-icon {
+    transition: transform 0.3s;
+}
 
-        .social-icon {
-            width: 3rem;
-            height: 3rem;
-            transition: transform 0.3s;
-        }
+.icon {
+    width: 8rem;
+    height: 8rem;
+}
 
-        .social-icon:hover {
-            transform: scale(1.1);
-        }
+.icon:hover,
+.social-icon:hover {
+    transform: scale(1.1); 
+}
 
-        @media (max-width: 768px) {
-            .skill-icons {
-                gap: 0;
-            }
-            .icon {
-                width: 5rem;
-                height: 5rem;
-            }
-            .icon-wrapper {
-                margin: 1rem;
-            }
-        }
+.skill-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.icon-wrapper::after {
+    content: attr(data-skill);
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 10rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--header-color);
+    color: var(--white-color); 
+    font-size: 0.8rem;
+    border-radius: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s;
+    z-index: 10;
+    text-align: center;
+}
+
+.icon-wrapper:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.text-highlight {
+    color: var(--accent-color);
+}
+
+.timeline {
+    width: 90%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-image: linear-gradient(45deg, var(--gradient-start), var(--gradient-middle), var(--gradient-end));
+    transform: translateX(-50%);
+}
+
+.timeline-component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.timeline-content {
+    width: 300px;
+    text-align: left;
+    position: relative;
+    padding: 20px;
+    background-color: var(--background-color);
+    box-shadow: 5px 5px 10px var(--box-shadow-color-1), -5px -5px 10px var(--box-shadow-color-2);
+    border-radius: 6px;
+    color: var(--text-color);
+    overflow-wrap: break-word;
+    margin: 1rem;
+}
+
+.timeline-circle {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, var(--gradient-start), var(--gradient-middle), var(--gradient-end));
+}
+
+.socials a {
+    display: inline-block;
+    margin: 0 0.5rem;
+}
+
+.social-icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+@media (max-width: 768px) {
+    .skill-icons {
+        gap: 0;
+    }
+    .icon {
+        width: 5rem;
+        height: 5rem;
+    }
+    .icon-wrapper {
+        margin: 1rem;
+    }
+}
