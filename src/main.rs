@@ -12,6 +12,7 @@ fn index() -> RawHtml<String> {
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>About Me</title>
             <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+            <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
             <style>
                 /* Color Palette */
                 :root {
